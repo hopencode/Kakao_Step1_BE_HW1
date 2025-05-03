@@ -56,6 +56,10 @@ public class CalculateLv2 {
 
             System.out.print("사칙연산 기호를 입력하세요: ");
             input = scanner.nextLine();
+            if (input.length() == 0) {
+                System.out.println("입력이 없습니다. 다시 시도하세요.");
+                continue;
+            }
             operator = input.charAt(0);
             if (!operators.contains(operator)){
                 System.out.println("올바른 사칙연산 기호가 아닙니다.");
