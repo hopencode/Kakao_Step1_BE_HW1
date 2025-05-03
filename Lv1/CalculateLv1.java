@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class CalculateLv1 {
@@ -30,6 +31,12 @@ public class CalculateLv1 {
         int num1, num2, result = 0;
         char operator;
 
+        HashSet<Character> operators = new HashSet<>();
+        operators.add('+');
+        operators.add('-');
+        operators.add('*');
+        operators.add('/');
+
         while (true) {
             num1 = getValidatedInteger(scanner, "첫 번째 숫자를 입력하세요 (0 이상의 정수): ");
             if (num1 == -1){
@@ -48,6 +55,10 @@ public class CalculateLv1 {
                 continue;
             }
             operator = input.charAt(0);
+            if (!operators.contains(operator)){
+                System.out.println("올바른 사칙연산 기호가 아닙니다.");
+                continue;
+            }
 
             if (operator == '+') {
                 result = num1 + num2;
