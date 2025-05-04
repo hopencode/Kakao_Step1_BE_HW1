@@ -7,11 +7,7 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator {
 
-    private static ArrayList<Number> results;
-
-    public ArithmeticCalculator() {
-        results = new ArrayList<>();
-    }
+    private static ArrayList<Number> results = new ArrayList<>();
 
     public ArrayList<Number> getter(){
         ArrayList<Number> copy_results = new ArrayList<>(results);
