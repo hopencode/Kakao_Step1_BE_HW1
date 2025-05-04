@@ -43,7 +43,6 @@ public class ArithmeticCalculator {
         }
 
         if (num1 instanceof Integer && num2 instanceof Integer) {
-            result = Math.floor(result);
             return (T) Integer.valueOf((int) result);
         } else {
             result = Math.round(result * 100) / 100.0;
